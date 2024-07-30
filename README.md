@@ -40,3 +40,5 @@ Next we created a measures table and populated it with key measures that will be
 - Total Customers (COUNT of unique customers in th e Orders table)
 - Total Quantity (SUM of quantities in the Orders table)
 - Revenue YTD and Profit YTD (using TOTALYTD and our existing measures).
+
+- Finally, we handled some issues with the geography in the stores table, and created Date and Geography hierarchies.
