@@ -42,3 +42,24 @@ Next we created a measures table and populated it with key measures that will be
 - Revenue YTD and Profit YTD (using TOTALYTD and our existing measures).
 
 - Finally, we handled some issues with the geography in the stores table, and created Date and Geography hierarchies.
+
+## Milestone 4
+
+Milestone 4 involved creatinmg the basic structure for the report and its navigation.
+
+## Milestone 5
+
+The Customer Detail page of the report was constructed during Milestone 5.
+
+First we created card visuals showing Total Customers and Average Revenue per Customer (also creating a new measure calculaing the latter).
+
+Second, we created donut and column charts showing custromers by location (country) and product category respectively.
+
+Third, we created a line chart showing Total Revenue over time.  We used the date hierarchy established earlier so that a report user can drill down as far as individual months.  We also used options in Power BI to add a trend line and forecase with 95% confidence interval for ten periods.
+
+Fourth, we created a Table showing the Top 20 Customers by Revenue (filetering the data using Power BI's Top N feature, and created card visulas highlihghted the top customer with revenuie and orders from them (again using Top N filtering with N=1.
+
+Finally we added a "between" slicer, allowing the report user to set the period (by years) for the dataset used to build all the visuals on this page,
+
+
+
