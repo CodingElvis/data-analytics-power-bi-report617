@@ -69,9 +69,25 @@ First, we added card visuals showing Total Revenue, Orders and Profit.  This cou
 
 Second, we copied and repurposed the line chart from Milestone 5 to show revenue over time.
 
-Third, we pinserted a pair of donut charts showing the split of revenue between countries and between store types.  Again, this involved repurposing the donut chart from Milestone 5.
+Third, we inserted a pair of donut charts showing the split of revenue between countries and between store types.  Again, this involved repurposing the donut chart from Milestone 5.
 
 We then repurposed the Milestone 5 column chart in order to show a bar chart of orders by product category.
 
 Finally we created KPI card visuals for quarterly revenue, orders and profit.  We began by creating measures of these quantities in the previous quarter, and used these to set a target based on 5% growth.
 We then showed performance against this measure on a formatted KPI visual card.
+
+## Milestone 7
+
+To complete Milestone 7 we created the Product Detail page of the report.
+
+First, we created gauge filters showing current quarter performance for orders, revenue and profit versus a target set as a 10% increase on the previous quarter.  This required creating measures of the previous quarter performance, target performance and QTD.  We formatted the gauges to show current QTD, with a "full bar" defined by target performance.  We added colour formatting to the callout QTD value based on whether the target had been achieved (involving setting up a measure of the performance gap and testing if it was positive or negative).
+
+Second we added card visuals showing which ccountry and product category filters were currently affecting the page (based on a template DAX query).
+
+Third, we added an area chart showing revenue over time by product catgeory.
+
+Fourth, we added a table of the ten top selling products (by revenue) showing revenue, orders, total customers (( and profit per order )), borrowing the table format from Milestone 5.
+
+Fifth, we added a scatter chart showing profit per item (a new calculated column) and quantity sold, thus allowing identification of high profit high volume data points.
+
+Finally we built a toolbar allowing the selections of product category and / or country to be made, allowing multiple options to be selected.  We allowed this to be opened and closed by creating bookmarks of the page with the slicers visible and hidden, then assigning them to "open filter" and "back" buttons respectively.
