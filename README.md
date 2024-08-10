@@ -91,3 +91,19 @@ Fourth, we added a table of the ten top selling products (by revenue) showing re
 Fifth, we added a scatter chart showing profit per item (a new calculated column) and quantity sold, thus allowing identification of high profit high volume data points.
 
 Finally we built a toolbar allowing the selections of product category and / or country to be made, allowing multiple options to be selected.  We allowed this to be opened and closed by creating bookmarks of the page with the slicers visible and hidden, then assigning them to "open filter" and "back" buttons respectively.
+
+## Milestone 8
+
+In Milestone 8 we built a Stores Map page, showing profits by store location.
+
+First, we inserted the map visual, assigning our geography hierarchy (Milestone 3) to the location field, and Profit YTD to the "bubble size" field.  This results in a map in which profit YTD can be visualised at different geographical levels by drilling up and down, namely Continent, Country and Local Region.
+
+Second, we augmented this map by providing a slicer allowing the user to select by individual country, allowing multiple selections and providing a "select all" option.
+
+Third, we built the possibility for a user to drillthrough from Local Region in the map to a page summarising performance in that area in the YTD.  We set up a specific drillthrough page and popuylated it with:
+-  a card visual showing the region selected;
+-  a table of the top 5 products in that region (by profit YTD) showing product description, profit YTD, orders and revenue;
+-  a column chart showing orders by category;
+-  gauges showing profit YTD and revenue YTD against a target of 20% growth on the same period last year (built using a measure calculating the base value on SAMEPERIODLASTYEAR).
+
+-  Finally we created a custom tooltip page showing the gauge visual of profit YTD.  We created a tooltip page and then set up a custom tooltip on the map page to show this when hovering over the local region.
