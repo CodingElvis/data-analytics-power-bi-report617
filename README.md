@@ -106,4 +106,17 @@ Third, we built the possibility for a user to drillthrough from Local Region in 
 -  a column chart showing orders by category;
 -  gauges showing profit YTD and revenue YTD against a target of 20% growth on the same period last year (built using a measure calculating the base value on SAMEPERIODLASTYEAR).
 
--  Finally we created a custom tooltip page showing the gauge visual of profit YTD.  We created a tooltip page and then set up a custom tooltip on the map page to show this when hovering over the local region.
+Finally we created a custom tooltip page showing the gauge visual of profit YTD.  We created a tooltip page and then set up a custom tooltip on the map page to show this when hovering over the local region.
+
+## Milestone 9
+
+Milestone 9 involved some finishing touches to the Power BI report.
+
+First, we ensured that certain visuals did not cross-filter some/all of the other visuals on the same page of the report.  (This involved selecting the source visual, formatting and edit interactions, then selecting the appropriate option on those destination visuals where crossfiltering was not desired).
+
+Second, we completyed the navigation toolbar for the report, which involved:
+- inserting four new buttons on the toolbar, set to custom icons representing each of the four main pages
+- changing settings for "on hover" to show different coloured versions of these icons
+- setting the button "action" to page navigation, selecting the appropriate destination page
+- grouping the buttons and copying them to each main report page.
+- 
