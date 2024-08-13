@@ -15,7 +15,7 @@ Milestone 2 involved extracting the project dataset from various sources, undert
 Four data sources were used:
 - an Azure SQL database
 - a provided CSV file
-- a CSV file requirding extraction from Azure blob storage
+- a CSV file requiring extraction from Azure blob storage
 - a zipped folder containing three CSV files that were extracted and combined through the PowerBi folder connector.
 
 Transformations on the data included:
@@ -41,7 +41,9 @@ Next we created a measures table and populated it with key measures that will be
 - Total Quantity (SUM of quantities in the Orders table)
 - Revenue YTD and Profit YTD (using TOTALYTD and our existing measures).
 
-- Finally, we handled some issues with the geography in the stores table, and created Date and Geography hierarchies.
+Finally, we handled some issues with the geography in the stores table, and created Date and Geography hierarchies.
+
+![image](https://github.com/user-attachments/assets/a7599bd4-e660-4a32-b41f-911d0d0e4a65)
 
 ## Milestone 4
 
@@ -57,9 +59,11 @@ Second, we created donut and column charts showing customers by location (countr
 
 Third, we created a line chart showing Total Revenue over time.  We used the date hierarchy established earlier so that a report user can drill down as far as individual months.  We also used options in Power BI to add a trend line and forecast with 95% confidence interval for ten periods.
 
-Fourth, we created a Table showing the Top 20 Customers by Revenue (filetering the data using Power BI's Top N feature, and created card visuals highlighted the top customer with revenuie and orders from them (again using Top N filtering with N=1.
+Fourth, we created a Table showing the Top 20 Customers by Revenue (filtering the data using Power BI's Top N feature) and created card visuals highlighted the top customer by revenue, and their revenue and orders (again using Top N filtering with N=1).
 
-Finally we added a "between" slicer, allowing the report user to set the period (by years) for the dataset used to build all the visuals on this page,
+Finally we added a "between" slicer, allowing the report user to set the period (by years) for the dataset used to build all the visuals on this page.
+
+![image](https://github.com/user-attachments/assets/df263b14-ad13-4fa2-a96c-b285302f341e)
 
 ## Milestone 6
 
@@ -76,13 +80,15 @@ We then repurposed the Milestone 5 column chart in order to show a bar chart of 
 Finally we created KPI card visuals for quarterly revenue, orders and profit.  We began by creating measures of these quantities in the previous quarter, and used these to set a target based on 5% growth.
 We then showed performance against this measure on a formatted KPI visual card.
 
+![execsummary](https://github.com/user-attachments/assets/e4e1d77e-4a2e-42ed-b2df-4a26d3c18662)
+
 ## Milestone 7
 
 To complete Milestone 7 we created the Product Detail page of the report.
 
 First, we created gauge filters showing current quarter performance for orders, revenue and profit versus a target set as a 10% increase on the previous quarter.  This required creating measures of the previous quarter performance, target performance and QTD.  We formatted the gauges to show current QTD, with a "full bar" defined by target performance.  We added colour formatting to the callout QTD value based on whether the target had been achieved (involving setting up a measure of the performance gap and testing if it was positive or negative).
 
-Second we added card visuals showing which ccountry and product category filters were currently affecting the page (based on a template DAX query).
+Second, we added card visuals showing which ccountry and product category filters were currently affecting the page (based on a template DAX query).
 
 Third, we added an area chart showing revenue over time by product catgeory.
 
@@ -91,6 +97,8 @@ Fourth, we added a table of the ten top selling products (by revenue) showing re
 Fifth, we added a scatter chart showing profit per item (a new calculated column) and quantity sold, thus allowing identification of high profit high volume data points.
 
 Finally we built a toolbar allowing the selections of product category and / or country to be made, allowing multiple options to be selected.  We allowed this to be opened and closed by creating bookmarks of the page with the slicers visible and hidden, then assigning them to "open filter" and "back" buttons respectively.
+
+![image](https://github.com/user-attachments/assets/558866fe-d0f7-42fd-ac0c-5318744b776a)
 
 ## Milestone 8
 
@@ -103,10 +111,14 @@ Second, we augmented this map by providing a slicer allowing the user to select 
 Third, we built the possibility for a user to drillthrough from Local Region in the map to a page summarising performance in that area in the YTD.  We set up a specific drillthrough page and popuylated it with:
 -  a card visual showing the region selected;
 -  a table of the top 5 products in that region (by profit YTD) showing product description, profit YTD, orders and revenue;
--  a column chart showing orders by category;
+-  a column chart showing orders by category
 -  gauges showing profit YTD and revenue YTD against a target of 20% growth on the same period last year (built using a measure calculating the base value on SAMEPERIODLASTYEAR).
 
 Finally we created a custom tooltip page showing the gauge visual of profit YTD.  We created a tooltip page and then set up a custom tooltip on the map page to show this when hovering over the local region.
+
+![stores_map](https://github.com/user-attachments/assets/2c6ac1e7-fccb-42c1-a92e-82539415ee38)
+
+![stores_drillthrough](https://github.com/user-attachments/assets/b209c2d7-b683-4f90-83a9-413c4ef5948f)
 
 ## Milestone 9
 
@@ -119,4 +131,25 @@ Second, we completyed the navigation toolbar for the report, which involved:
 - changing settings for "on hover" to show different coloured versions of these icons
 - setting the button "action" to page navigation, selecting the appropriate destination page
 - grouping the buttons and copying them to each main report page.
-- 
+
+## Milestone 10
+
+NOTE:  This section remains incomplete due to maintenance being required on the database before some of the tasks can be completed.
+
+The tenth and final milestone involved connecting to, exploring and using SQL to query a postgres database server hosted on Azure.  This allows metrics to be provided for non Power BI users.
+
+After connecting to the database we sought to answer five questions. These were:
+
+1.  How many staff are there in all of the UK stores?
+2.  Which month in 2022 has had the highest revenue?
+3.  Which German store type had the highest revenue for 2022?
+4.  Create a view where the rows are the store types and the columns are the total sales, percentage of total sales and the count of orders
+5.  Which product category generated the most profit for the "Wiltshire, UK" region in 2021?
+
+SQL queries and output for the first three queries are in this repository. Questions 4 and 5 to be addressed after the database is fixed.
+Answers are:
+1.  13,273
+2.  August
+3.  Local store type
+4.  na
+5.  to be added
