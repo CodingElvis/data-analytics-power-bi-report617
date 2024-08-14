@@ -151,4 +151,5 @@ Answers are:
 3.  Local store type
 4.  
 ![Q4screen](https://github.com/user-attachments/assets/766a4a5d-e6cd-4f0c-8021-99e632433fd0)
+
 5.  Homeware
