@@ -134,8 +134,6 @@ Second, we completyed the navigation toolbar for the report, which involved:
 
 ## Milestone 10
 
-NOTE:  This section remains incomplete due to maintenance being required on the database before some of the tasks can be completed.
-
 The tenth and final milestone involved connecting to, exploring and using SQL to query a postgres database server hosted on Azure.  This allows metrics to be provided for non Power BI users.
 
 After connecting to the database we sought to answer five questions. These were:
@@ -146,10 +144,10 @@ After connecting to the database we sought to answer five questions. These were:
 4.  Create a view where the rows are the store types and the columns are the total sales, percentage of total sales and the count of orders
 5.  Which product category generated the most profit for the "Wiltshire, UK" region in 2021?
 
-SQL queries and output for the first three queries are in this repository. Questions 4 and 5 to be addressed after the database is fixed.
+SQL queries and output are in this repository. 
 Answers are:
 1.  13,273
 2.  August
 3.  Local store type
-4.  na
-5.  to be added
+4.  ![Q4screen](https://github.com/user-attachments/assets/766a4a5d-e6cd-4f0c-8021-99e632433fd0)
+5.  Homeware
